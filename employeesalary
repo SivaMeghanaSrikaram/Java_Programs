@@ -1,0 +1,52 @@
+import java.util.*;
+public class Employee
+{
+    int id;
+    long basic;
+    long hris;
+    long pf;
+    void setEmployeeDetails(int a,long b,long c,long d) //parameters 
+	{
+		id=a;
+		basic=b;
+		hris=c;
+		pf=d;
+		
+	}
+	void checkforbonus()
+	{
+	    long total=(basic+hris)-pf;
+	    System.out.println("Total salary:"+total);
+	    if(total<50000){
+	        System.out.println("Eligible for 5000 bonus");
+	    }
+	    else{
+	        System.out.println("Not eligible for bonus");
+	    }
+	}
+	static void suggestionsToEmployee()
+	{
+		System.out.println("Monday to Thursday wear Formals");
+		System.out.println("Saturday: Casuals");
+	}
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+    	System.out.println("welcome to employee portal");
+    	for(int i=1;i<=2;i++)
+    	{
+    	System.out.println("please enter your details");
+    	System.out.println("ID");
+    	int a=sc.nextInt();
+    	System.out.println("Basic salary");
+    	long b=sc.nextLong();
+    	System.out.println("HRIS");
+    	long c=sc.nextLong();
+    	System.out.println("PF");
+    	long d=sc.nextLong();
+    	Employee e=new Employee();
+    	e.setEmployeeDetails(a, b, c, d);
+    	e.checkforbonus();
+    	Employee.suggestionsToEmployee();
+	}
+}
+}
