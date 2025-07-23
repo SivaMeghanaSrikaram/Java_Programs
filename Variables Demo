@@ -1,0 +1,21 @@
+package com.fundamentals;
+
+public class Var {
+	int c=20; //non-static(or)global
+	static int d=40; //static
+	void show()
+	{
+		int a=10;//local
+		System.out.println("a val is:"+a);
+		System.out.println("c val is:"+c);
+	}
+	public static void main(String[] args) {
+		int b=30;
+		System.out.println("b val is:"+b);
+		Var vd=new Var();
+		vd.show();
+		//System.out.println("c val is:"+c); .....cannot use 'c' here bcoz that is non static and this is static method
+		System.out.println("d val is:"+d); //now d is static variable so that we can use it in static method
+	}
+
+}
