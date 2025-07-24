@@ -1,0 +1,35 @@
+package com.vote;
+import java.util.*;
+public class VoteEligibility {
+	String name;
+	int age;
+	void getDetails(String name,int age)
+	{
+		this.name=name;
+		this.age=age;
+	}
+	void Eligibility()
+	{
+		if(age>=18) {
+			System.out.println("Eligible to vote");
+		}
+		else
+		{
+			System.out.println("Not Eligible to vote");
+		}
+	}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+    System.out.println("Welcome to e-Vote portal!!!");
+		System.out.println("Enter your name:");
+		String a=sc.next();
+		System.out.println("Enter your age:");
+		int b=sc.nextInt();
+		VoteEligibility v=new VoteEligibility();
+		v.getDetails(a, b);
+		v.Eligibility();
+		
+
+	}
+
+}
