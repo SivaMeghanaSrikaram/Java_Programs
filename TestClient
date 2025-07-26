@@ -1,0 +1,57 @@
+package com.gym;
+import java.util.*;
+public class TestClient {
+	
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("welcome to colors gym app");
+		System.out.println("please register with your details");
+		System.out.println("please enter your firstname");
+		String a=sc.next();
+		System.out.println("please enter your lastname");
+		String b=sc.next();
+		System.out.println("please enter your username");
+		String c=sc.next();
+		System.out.println("please enter your password");
+		String d=sc.next();
+		System.out.println("thank you ...your details are with us");
+		System.out.println("please login with your details");
+		System.out.println("please enter your username");
+		String e=sc.next();
+		System.out.println("please enter your password");
+		String f=sc.next();
+
+	//create objects
+	UserImpl userobj = new UserImpl();
+	WorkoutImpl workoutobj = new WorkoutImpl();
+	
+	//user 
+	User user = new User(a,b,c,d);
+	userobj.register(user, 0);
+	boolean result = userobj.login(e,f);
+	System.out.println("user login:"+result);
+	if(result)
+	{
+		System.out.println(a+"...welcome to colorszym");
+		System.out.println("please follow below menu for your fitness");
+		Workout workout = new Workout("cardio","tredmill",0,10,"fitness");
+		Workout workout1 = new Workout("muscle","dumbell",20,10,"strength");
+		workoutobj.addWorkout(workout, 0);
+		workoutobj.addWorkout(workout1, 1);
+		Workout workouts[] = workoutobj.displayWorkouts();
+		for(Workout work:workouts)
+		{
+			System.out.println(work);
+		}
+	}
+	else
+	{
+		System.out.println("Invalid User");
+	}
+	//System.out.println(user);
+	
+	//workout
+	
+	}
+}
