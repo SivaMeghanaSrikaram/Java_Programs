@@ -1,0 +1,33 @@
+package com.casting;
+
+class Cat{
+	void Sound()
+	{
+		System.out.println("Meow");
+	}
+}
+
+class Tiger extends Cat{
+	void Sound()
+	{
+		System.out.println("Roar");
+	}
+	void Food()
+	{
+		System.out.println("Non veg");
+	}
+	
+}
+public class Animal {
+
+	public static void main(String[] args) {
+
+		Cat c;  //reference variable
+		c=new Cat();
+		c.Sound();
+		c=new Tiger();
+		c.Sound();
+		((Tiger)c).Food();  //class casting
+	}
+
+}
