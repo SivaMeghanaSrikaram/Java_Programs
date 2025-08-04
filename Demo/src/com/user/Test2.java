@@ -1,0 +1,20 @@
+package com.user;
+
+public interface Test2 {
+	int a=10;
+	int b=20;
+
+}
+class Manasa implements Test2
+{
+	int a=100;
+	void Meghana()
+	{
+		System.out.println(a);
+	}
+	public static void main(String[] args)
+	{
+		Manasa m=new Manasa();
+		m.Meghana();
+	}
+}

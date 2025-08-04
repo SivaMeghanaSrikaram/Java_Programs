@@ -1,0 +1,17 @@
+package com.user;
+
+abstract class Demo {
+	int a=10;
+}
+public class Test extends Demo{
+	Test()
+	{
+		System.out.println(a);
+}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Test t=new Test();
+	}
+}
+
