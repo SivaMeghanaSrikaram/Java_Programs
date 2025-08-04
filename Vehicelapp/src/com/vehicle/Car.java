@@ -1,0 +1,29 @@
+package com.vehicle;
+
+public class Car extends Vehicle {
+	void start() {
+		// TODO Auto-generated method stub
+		System.out.println("open the door");
+		System.out.println("turnkey");
+		System.out.println("press the accelerator");
+		
+	}
+
+	void stop() {
+		// TODO Auto-generated method stub
+		System.out.println("remove leg on acceleartor");
+		System.out.println("press the break");
+		System.out.println("turn key left");
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Car c=new Car();
+		c.start();
+		c.stop();
+		c.offerDetails();
+
+	}
+
+}
