@@ -1,0 +1,55 @@
+import java.util.Set;
+import java.util.TreeMap;
+
+public class RawTreeMapDemo {
+    public static void main(String[] args) {
+
+        // TreeMap without generics (raw type)
+        TreeMap map = new TreeMap();
+
+        //  Add 
+        map.put(1, "Apple");
+        map.put(2, 200);
+        map.put(3, true);
+        map.put(4, 3.14);
+        map.put(5, null);     // null values allowed
+
+        System.out.println("Initial TreeMap (sorted by key): " + map);
+
+        // map.put(null, "NullKey"); // Throws NullPointerException
+
+        // map.put("Six", 600); // Throws ClassCastException due to different key type
+
+        // Duplicate key (overwrite)
+        map.put(1, "Banana"); // replaces "Apple"
+        System.out.println("After duplicate key (1): " + map);
+
+        // Duplicate value (allowed)
+        map.put(6, "Banana"); // same value, different key
+        System.out.println("After duplicate value ('Banana'): " + map);
+
+        // Remove 
+        map.remove(2);
+        map.remove(100); // key not present
+        System.out.println("After removing key 2 and non-existent 100: " + map);
+
+        // Get value
+        System.out.println("Value at key 1: " + map.get(1));
+        System.out.println("Value at key 3: " + map.get(3));
+        System.out.println("Value at non-existent key 100: " + map.get(100));
+
+        //Contains checks
+        System.out.println("Contains key 3? " + map.containsKey(3));
+        System.out.println("Contains value 3.14? " + map.containsValue(3.14));
+        System.out.println("Contains key 2? " + map.containsKey(2));
+        System.out.println("Contains value 'Apple'? " + map.containsValue("Apple"));
+
+        // Iteration
+        System.out.println("\nIterating entries (sorted by key):");
+        Set keys = map.keySet();
+        for (Object key : keys) {
+            Object value = map.get(key);
+            System.out.println("Key: " + key + ", Value: " + value);
+        }
+    }
+}
