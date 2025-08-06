@@ -7,7 +7,7 @@ public class RawLinkedHashMapDemo {
         // LinkedHashMap without generics (raw type)
         LinkedHashMap map = new LinkedHashMap();
 
-        // ✅ 1. Add different data types
+        // Add 
         map.put(1, "Apple");
         map.put("Two", 2);
         map.put(3.0, true);
