@@ -1,0 +1,28 @@
+SQL
+-----
+1.DDL (data definition lang)
+(shortcut)--DRCAT
+d-drop
+r-rename
+c-create
+a-alter
+t-truncate
+
+2.DML (data manipulation lang)
+(shortcut)--SUDI
+s-select
+u-update
+d-delete
+i-insert
+
+3.TCL (transaction control lang)
+(shortcut)--CRS
+c-commit
+r-rollback
+s-savepoint
+
+4.DCL (data control lang)
+(shortcut)--GR
+g-grant
+r-revoke
+
