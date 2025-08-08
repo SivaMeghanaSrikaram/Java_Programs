@@ -11,7 +11,7 @@ public class JDBCScalarQueryTest {
 		//global objects
 		Connection con = null;
 		Statement st = null;
-        Result rs = null;
+        ResultSet rs = null;
 		
 		try {
 			//1.load driver
@@ -30,7 +30,7 @@ public class JDBCScalarQueryTest {
 			st = con.createStatement();
 			
 			//5.Execute and process result
-			rs = st.executeString(qry);
+			rs = st.executeQuery(qry);
 			
 			//Business logic
 			while(rs.next()) {
