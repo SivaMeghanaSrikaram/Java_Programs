@@ -1,0 +1,63 @@
+package com.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class JDBCLimitandSkipTest {
+
+	public static void main(String[] args) {
+		//global objects
+		Connection con = null;
+		Statement st = null;
+    ResultSet rs = null;
+		
+		try {
+			//1.load driver
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			//2.Establish connection
+			con = DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/amazon",
+					"root",
+					"root");
+			
+			//3.Prepare query
+			String qry = "select * from product limit 1 skip 1";  //only 2nd row bcoz it will skip 1st row(skip) and get nxt 1 row(limit) eventhough there are few rows, we only get 2nd row as o/p
+			
+			//4.Create statement (Vehicle)
+			st = con.createStatement();
+			
+			//5.Execute and process result
+			rs = st.executeQuery(qry);
+			
+			//Business logic
+			while(rs.next()) {
+				System.out.println(rs.getInt(1)+" "+
+			                       rs.getString(2)+" "+
+						           rs.getInt(3));
+			}
+				
+			}catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally {
+			try {
+        rs.close()
+				st.close();
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+		
+	}
+
+}
