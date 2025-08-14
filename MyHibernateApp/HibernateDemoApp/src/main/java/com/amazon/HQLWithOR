@@ -1,0 +1,32 @@
+package com.amazon;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+
+public class HQLWithOR {
+
+    public static void main(String[] args) {
+        // SessionFactory object
+        SessionFactory factory = HibernateConfig.getSessionFactory();
+        
+        // Session object
+        Session ses = factory.openSession();
+
+        //or operator
+        Query qry = ses.createQuery("from Product p where p.price > 5000 or p.pname = 'Oppo'");
+        
+        List<Product> products = qry.list();
+        
+        // Printing products
+        for (Product p : products) {
+            System.out.println(p.getPid() + "  " + p.getPname() + "  " + p.getPrice());
+        }
+        
+        // close objects
+        ses.close();
+        factory.close();
+    }
+}
