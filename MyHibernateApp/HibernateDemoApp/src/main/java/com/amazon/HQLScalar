@@ -1,0 +1,35 @@
+package com.amazon;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+
+public class HQLScalar {
+
+    public static void main(String[] args) {
+        // SessionFactory object
+        SessionFactory factory = HibernateConfig.getSessionFactory();
+        
+        // Session object
+        Session ses = factory.openSession();
+        
+        // Scalar HQL query: fetch only pname and price of products with price > 1000
+        Query qry = ses.createQuery(
+            "select p.pname, p.price from Product p where p.price > 1000"
+        );
+        
+        List<Object[]> results = qry.list();
+        
+        for (Object[] row : results) {
+            String name = (String) row[0];
+            double price = (double) row[1];
+            System.out.println(name + "  " + price);
+        }
+        
+        // close objects
+        ses.close();
+        factory.close();
+    }
+}
