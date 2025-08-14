@@ -1,0 +1,33 @@
+package com.amazon;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+
+public class HQLWithLike {
+
+    public static void main(String[] args) {
+        // SessionFactory object
+        SessionFactory factory = HibernateConfig.getSessionFactory();
+        
+        // Session object
+        Session ses = factory.openSession();
+        
+        // HQL with LIKE operator
+        Query qry = ses.createQuery("from Product p where p.pname like :pattern");
+        qry.setParameter("pattern", "A%"); // Starts with 'A'
+        
+        List<Product> products = qry.list();
+        
+        // Printing products
+        for (Product p : products) {
+            System.out.println(p.getPid() + "  " + p.getPname() + "  " + p.getPrice());
+        }
+        
+        // close objects
+        ses.close();
+        factory.close();
+    }
+}
