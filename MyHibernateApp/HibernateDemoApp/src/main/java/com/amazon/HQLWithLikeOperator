@@ -17,7 +17,10 @@ public class HQLWithLike {
         
         // HQL with LIKE operator
         Query qry = ses.createQuery("from Product p where p.pname like :pattern");
-        qry.setParameter("pattern", "A%"); // Starts with 'A'   //named operator
+        qry.setParameter("pattern", "A%"); // Starts with 'A'   //named operator......
+        //positional parameter
+        /*(Query qry = ses.createQuery("from Product p where p.pname like ?1");
+        qry.setParameter(1, "A%");*/
         
         List<Product> products = qry.list();
         
