@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zookeeper Form</title>
+    </head>
+    <body>
+        <h1>Zoo Keeper Application Form</h1>
+        <h3>Please complete the form. Mandatory fields are marked with a <span style="color: red;">*</span></h2>
+        <br>
+        <hr>
+
+        <h2>Contact Details</h2>
+        <form>
+            <label>Name <span style="color: red;">*</span></label>
+            <input type="text" name="name" required><br>
+            <label>Telephone</label>
+            <input type="tel" name="number"><br>
+            <label>Email <span style="color: red;">*</span></label>
+            <input type="email" name="email" required>
+        </form>
+   
+        <br>
+        <hr>
+
+        <form>
+            <label>PERSONAL INFORMATION</label><br><br>
+            <label>Age<span style="color: red;">*</span></label>
+            <input type="number" name="age" required><br>
+            <lable>Gender   <select name="gender"></lable>
+            <option value="" ></option>
+            <option value="male">Male</option>
+            <option value="female">Female</option><br>
+            </select>
+            <table>
+                <tr>
+                    <td>What did you first
+                        know you wanted to
+                        be a zoo keeper?</td>
+                    <td><textarea name="experience" rows="4" cols="40"></textarea></td>
+                </tr>
+            </table><br>
+        </form>
+        <hr>
+        <form>
+        <h2>Select Your Favorite Animals</h2>
+            <table>
+                <tr>
+                    <td><input type="checkbox" name="animals" value="lion"> Lion</td><br>
+                    <td><input type="checkbox" name="animals" value="elephant"> Elephant</td>
+                    <td><input type="checkbox" name="animals" value="giraffe"> Giraffe</td>
+                    </tr>
+                <tr>
+                    <td><input type="checkbox" name="animals" value="zebra"> Zebra</td>
+                    <td><input type="checkbox" name="animals" value="panda"> Panda</td>
+                    <td><input type="checkbox" name="animals" value="kangaroo"> Kangaroo</td>
+                </tr>
+            </table><br>
+        </form>
+    <button>Submit Application</button>
+    </body>
+</html>
