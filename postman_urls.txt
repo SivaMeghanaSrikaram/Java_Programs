@@ -1,0 +1,13 @@
+http://localhost:2027/api/product/addProduct-POST
+
+
+http://localhost:2027/api/product/getById/3- GET(by specific id)
+
+
+http://localhost:2027/api/product/listOfProducts-GET
+
+
+http://localhost:2027/api/product/updateProduct/3-PUT
+
+
+http://localhost:2027/api/product/deleteProduct/2-DELETE
