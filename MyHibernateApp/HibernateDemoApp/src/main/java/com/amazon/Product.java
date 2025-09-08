@@ -17,6 +17,9 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "productId")
 	private int pid;
+	public Product() {
+		super();
+	}
 	@Column(name = "productName")
 	private String pname;
 	private int price;
