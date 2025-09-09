@@ -1,0 +1,23 @@
+Topic                 Tag                        Attribute                       Value
+------                -----                      ----------                      --------
+headings           h1-h6                     style                       depends on requirment
+paragraph         p,pre,div                  style                      depends on requirment
+void tag            br, hr                       
+link tags            a                           href,target              depends on requirment
+list tags         ol,ul,dl,li,dt,dd           type,start                depends on requirment
+image tags        img                    src,alt,width,heigth     depends on requirment
+table tags       table,th,tr,td       border,rowspan,colspan   depends on requirment
+forms           form,lable,input      action,method,             depends on requirments
+                                              type,name,value
+
+
+formatting       b,strong,i,                  style
+   tag              em,sub,sup,
+
+media tags       audio,video            src, type, controls,         depends on req
+                                                     width, height
+
+Semantic tags    header,nav,section,
+                        article,footer                 style                    depends on req
+
+   

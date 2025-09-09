@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>signup</title>
+    </head>
+    <body>
+        <center>
+            <h1 style="color: red;">Please signup here!!!</h1>
+        </center>
+        <form>
+        <table border="1">
+            <tr>
+                <td>Enter Name</td>
+                <td><input type="text" ></td>
+            </tr>
+            <tr>
+                <td>Enter Password</td>
+                <td><input type="password" ></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender">Male
+                    <input type="radio" name="gender">Female
+                </td>
+                
+            </tr>
+            <tr>
+                <td>Enter MobileNumber</td>
+                <td><input type="number" value="Number"></td>
+            </tr>
+            <tr>
+                <td>Enter DOB</td>
+                <td><input type="date" value="DOB"></td>
+            </tr>
+            <tr>
+                <td>Enter Address</td>
+                <td><textarea name="address" rows="4" cols="40"></textarea></td>
+            </tr>
+            <tr>
+                <td>Select Qualification</td>
+                <td><select name="gender">
+                <option value="" disabled selected>Select</option>
+                <option value="Btech">B.Tech</option>
+                <option value="Mtech">M.Tech</option><br>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Choose your Skills</td>
+                <td>
+                <select name="skills" multiple size="5">
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="c++">C++</option>
+                <option value="javascript">JavaScript</option>
+                <option value="html">HTML</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Prefered Shift</td>
+                <td>
+                    <input type="checkbox" value="dayshift">DayShift
+                    <input type="checkbox" value="Nightshift">NightShift
+                    <input type="checkbox" value="dayornightshift">DayShift/NightShift
+                </td>
+            </tr>
+            <tr>
+                <td>Upload your resume</td>
+                <td><button>Choose File</button></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;" colspan="2">
+                    <button>Register</button>
+                    <button>Reset</button>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>
