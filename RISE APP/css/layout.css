@@ -1,0 +1,44 @@
+header {
+    background-color: rgb(248, 187, 137);
+    text-align: center;
+    font-size: 40px;
+    padding: 40px;
+}
+ nav {
+    background-color: bisque;
+    height: 250px;
+    width: 30%;
+    float: left;
+ }
+ nav ul {
+    list-style-type: none;
+ }
+
+ nav ul li {
+    text-align: center;
+    padding: 20px 0;
+ }
+
+ nav ul li a {
+    text-decoration: none;
+
+ }
+
+ article {
+    float: left;
+    width: 70%;
+    height: 250px;
+    background-color:rgb(252, 192, 119);
+ }
+
+ section ::after {
+    display: table;
+    content: "";
+    clear: both;
+ }
+footer {
+    background-color:rgb(248, 187, 137);
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 0;
+}
